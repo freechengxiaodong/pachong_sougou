@@ -32,11 +32,11 @@ class IndexController extends Controller
                     }else{
                         echo '第'.$flag.'条'.'&nbsp;&nbsp;无title信息';
                     }
-                    DB::table('img')->insert([
+                    DB::table('imgs')->insert([
                         'title' => $v->title,
                         'href' => $v->oriPicUrl
                     ]);
-                   // $img[$flag]['href'] = $v->oriPicUrl;
+                   // $img[$flag]['href'] = $v->oriPicUrl;;;
                     $flag++;
                 }
             }
@@ -61,5 +61,9 @@ class IndexController extends Controller
         $body = $body->getContents(); //获得主体内容
         $data = json_decode($body);
         return json_encode($data->data->items);
+    }
+    public function cc(){
+        $res = DB::table('imgs')->get();
+        return view('cc',compact('res'));
     }
 }
