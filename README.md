@@ -18,3 +18,7 @@
 - Database agnostic [schema migrations](https://laravel.com/docs/migrations).
 - [Robust background job processing](https://laravel.com/docs/queues).
 - [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+
+curl.cainfo="D:/phpstudy_pro/Extensions/php/php7.3.4nts/extras/ssl/cacert.pem"
+
+openssl.cafile="D:/phpstudy_pro/Extensions/php/php7.3.4nts/extras/ssl/cacert.pem"
